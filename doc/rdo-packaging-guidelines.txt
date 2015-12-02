@@ -1,0 +1,60 @@
+= RDO OpenStack Packaging Guidelines
+Author: Haïkel Guémar <hguemar at fedoraproject dot org>
+:toc2:
+:icons:
+:iconsdir: ../images/icons/
+:numbered:
+:source-highlighter: highlightjs
+:rdo: https://rdoproject.org/
+:rdorepo: http://rdo.fedorapeople.org
+:f21-juno-repo: https://repos.fedorapeople.org/repos/openstack/openstack-juno/fedora-21/
+:f20-icehouse-repo: https://repos.fedorapeople.org/repos/openstack/openstack-icehouse/fedora-20/
+:redhat: http://www.redhat.com
+:redhat-openstack-org: https://github.com/redhat-openstack/
+:rhosp: http://www.redhat.com/openstack
+:fedora-packaging-guidelines: https://fedoraproject.org/wiki/Packaging:Guidelines
+:fedora-packages-review-process: https://fedoraproject.org/wiki/Package_Review_Process
+
+Introduction
+------------
+
+This document collects guidelines and practical tips
+
+
+Packaging Guidelines
+--------------------
+
+RDO packages mostly follow {fedora-packaging-guidelines}[Fedora Packaging Guidelines].
+There are two exceptions:
+
+ * Override rules listed in this document.
+ * Exceptions granted by RDO Packaging Group (e.g. bundling)
+
+Packages Review Process
+-----------------------
+
+All reviews **must** block the review tracker using the alias RDO-<release>-REVIEW.
+Announcing reviews on the RDO mailing list is encouraged to raise awareness within the
+community and speed up the process.
+
+General-purpose libraries and clients should be submitted through Fedora Package Review
+{fedora-packages-review-process}[Process].
+
+As for OpenStack services, they should follow the same process but open a ticket under
+the **RDO** product and **Package Review** component. Packagers are encouraged to create
+a git repository with their packaging for pre-review.
+
+For reviewers
+~~~~~~~~~~~~~
+
+Reviewers are encouraged to use fedora-review tool to generate and post formal review
+on the ticket.
+
+
+RDO Guidelines
+--------------
+
+Systemd packaging
+~~~~~~~~~~~~~~~~~
+
+* All services must be configured to allow automated restart (Restart=[on-failure|always])

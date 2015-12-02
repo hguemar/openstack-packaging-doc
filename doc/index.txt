@@ -41,6 +41,7 @@ https://www.redhat.com/mailman/listinfo/rdo-list[rdo-list@redhat.com].
 | Packaging Guides
 
 a|* link:rdo-packaging.html[*RDO Packaging Guide*] +
+a|* link:rdo-packaging-guidelines.html[*RDO Packaging Guidelines*] +
 * link:rdopkg/rdopkg.1.html[*`rdopkg` manual*] +
 |===
 
