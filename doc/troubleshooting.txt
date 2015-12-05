@@ -1,0 +1,26 @@
+= RDO OpenStack Packaging Troubleshooting
+Author: Haïkel Guémar <hguemar at fedoraproject dot org>
+:toc2:
+:icons:
+:iconsdir: ../images/icons/
+:numbered:
+:source-highlighter: highlightjs
+:rdo: https://rdoproject.org/
+:redhat: http://www.redhat.com
+:redhat-openstack-org: https://github.com/redhat-openstack/
+:rhosp: http://www.redhat.com/openstack
+:fedora-packaging-guidelines: https://fedoraproject.org/wiki/Packaging:Guidelines
+:fedora-packages-review-process: https://fedoraproject.org/wiki/Package_Review_Process
+
+FAQ
+---
+
+My EPEL branch request has been denied
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+EPEL rules exclude packages that in a limited set of channels of
+RHEL but Fedora Releng uses a generated list of packages to filter
+branch requests. Check first that your package is not listed there
+by mistake
+http://infrastructure.fedoraproject.org/repo/json/pkg_el7.json
+
