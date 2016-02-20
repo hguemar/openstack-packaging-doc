@@ -214,7 +214,7 @@ rdopkg
 ~~~~~~
 
 https://github.com/redhat-openstack/rdopkg[rdopkg] is a command line tool
-that automates many operations on RDO packags including:
+that automates many operations on RDO packages including:
 
  * rebases to new version
  * introducing patches
